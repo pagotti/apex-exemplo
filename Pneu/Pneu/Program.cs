@@ -36,9 +36,6 @@ namespace Pneu
 
             }
 
-            var r = new Regex(@"(\d{2})?(\d{4,5})(\d{4})", RegexOptions.Compiled);
-            var telefone = r.Replace("47955554444", "($1)$2-$3");
-
         }
     }
 }

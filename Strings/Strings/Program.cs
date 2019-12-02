@@ -31,9 +31,6 @@ namespace Strings
             string textoAntigo = "um texto escrito em letras ";
             var tamanho = textoAntigo.IndexOf("em");
             Console.WriteLine(tamanho);
-
-            Math.
-
             Console.ReadKey();
         }
     }

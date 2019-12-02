@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace Telefone
 {
@@ -41,7 +42,11 @@ namespace Telefone
                 numero = telefone;
             }
 
-          
+            Console.WriteLine(numero);
+            
+            // versao com regex
+            var r = new Regex(@"(\d{2})?(\d{4,5})(\d{4})", RegexOptions.Compiled);
+            numero = r.Replace(telefone, "($1) $2-$3");
             Console.WriteLine(numero);
 
         }
