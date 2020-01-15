@@ -12,7 +12,28 @@ namespace Contas
 
         public string Numero { get; set; }
 
-        public decimal Saldo { get; set; }
+        private decimal saldo;
+        public decimal Saldo { 
+            get { return this.saldo; }
+            set 
+            {
+                if (value < 0 && !this.Especial)
+                {
+                    throw new InvalidOperationException("Conta não especial");
+                }
+
+                if (this.Especial && Math.Abs(value) > this.Limite)
+                {
+                    throw new InvalidOperationException("Excedeu o limite");
+                }
+
+                this.saldo = value;
+            } 
+        }
+
+        public bool Especial { get; set; }
+
+        public decimal Limite { get; set; }
         
         public string DisplayNomeConta 
         { 
