@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function msg() {
+            alert('Bem Vindo!');
+        }
+    </script>
+
+    <table>
+        <thead>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="salvar.html">
+        <fieldset> 
+            <legend>Dados Pessoais</legend> 
+            <input name="nome" type="text" placeholder="informe o nome" required>
+            <label>Idade</label> 
+            <input name="idade" type="number">
+            <input type="button" value="Botão" onclick="msg()">
+            <input type="hidden" value="20" name="chave">
+            <input type="submit"> 
+        </fieldset>
+
+        <fieldset>
+            <legend>Select</legend>
+            <select name="cidade"> 
+                <optgroup label="Santa Catarina"> 
+                <option value="Blumenau" label="Blumenau"></option> 
+                <option value="Florianópolis" label="Florianópolis"></option> 
+                <option value="Criciúma" label="Criciúma"></option> 
+                <option value="Lages" label="Lages"></option> 
+                </optgroup> 
+                <optgroup label="Rio Grande do Sul"> 
+                <option value="Porto Alegre" label="Porto Alegre"></option> 
+                <option value="Canoas" label="Canoas"></option> 
+                <option value="Guaíba" label="Guaíba"></option> 
+                <option value="Santana do Livramento" label="Santana do Livramento"></option> 
+                </optgroup> 
+            </select> 
+        </fieldset>
+    </form>
+</body>
+</html>

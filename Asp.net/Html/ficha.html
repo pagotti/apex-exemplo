@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ficha Apex</title>
+</head>
+<body>
+    <form action="apex_ficha.html">
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td width="20%"><label>Nome</label></td>
+                    <td width="80%"><input name="nome" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>Data</label></td>
+                    <td><input id="data" name="data" type="date"></td>
+                </tr>
+                <tr>
+                    <td><label>Curso</label></td>
+                    <td>
+                        <select name="curso">
+                            <option value="logica_101" label="Lógica de Programação"></option>
+                            <option value="csharp_backend" label="C# Back-End"></option>
+                            <option value="excel" label="Excel"></option>
+                            <option value="java" label="Java Back-End"></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Instrutor</label></td>
+                    <td><input name="instrutor" type="text"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Seus comentários...</p>
+        <table>
+            <thead>
+                <th>Tópico</th>
+                <th>Excelente</th>
+                <th>Muito Bom</th>
+                <th>Bom</th>
+                <th>Regular</th>
+                <th>Ruim</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="20%">Sala de Aula/Equipamento</td>
+                    <td width="16%"><input name="sala" type="radio" value="excelente"></td>
+                    <td width="16%"><input name="sala" type="radio" value="muito_bom"></td>
+                    <td width="16%"><input name="sala" type="radio" value="bom"></td>
+                    <td width="16%"><input name="sala" type="radio" value="regular"></td>
+                    <td width="16%"><input name="sala" type="radio" value="ruim"></td>
+                </tr>
+                <tr>
+                    <td>Pontualidade</td>
+                    <td><input name="pontualidade" type="radio" value="excelente"></td>
+                    <td><input name="pontualidade" type="radio" value="muito_bom"></td>
+                    <td><input name="pontualidade" type="radio" value="bom"></td>
+                    <td><input name="pontualidade" type="radio" value="regular"></td>
+                    <td><input name="pontualidade" type="radio" value="ruim"></td>
+                </tr>
+                <tr>
+                    <td>Objetividade</td>
+                    <td><input name="objetividade" type="radio" value="excelente"></td>
+                    <td><input name="objetividade" type="radio" value="muito_bom"></td>
+                    <td><input name="objetividade" type="radio" value="bom"></td>
+                    <td><input name="objetividade" type="radio" value="regular"></td>
+                    <td><input name="objetividade" type="radio" value="ruim"></td>
+                </tr>
+                <tr>
+                    <td>Conteudo Apresentado</td>
+                    <td><input name="conteudo" type="radio" value="excelente"></td>
+                    <td><input name="conteudo" type="radio" value="muito_bom"></td>
+                    <td><input name="conteudo" type="radio" value="bom"></td>
+                    <td><input name="conteudo" type="radio" value="regular"></td>
+                    <td><input name="conteudo" type="radio" value="ruim"></td>
+                </tr>
+                <tr>
+                    <td>Aplicação dos Conteúdos em suas Atividades</td>
+                    <td><input name="aplicacao" type="radio" value="excelente"></td>
+                    <td><input name="aplicacao" type="radio" value="muito_bom"></td>
+                    <td><input name="aplicacao" type="radio" value="bom"></td>
+                    <td><input name="aplicacao" type="radio" value="regular"></td>
+                    <td><input name="aplicacao" type="radio" value="ruim"></td>
+                </tr>                                                
+                <tr>
+                    <td>Instrutor</td>
+                    <td><input name="instrutor" type="radio" value="excelente"></td>
+                    <td><input name="instrutor" type="radio" value="muito_bom"></td>
+                    <td><input name="instrutor" type="radio" value="bom"></td>
+                    <td><input name="instrutor" type="radio" value="regular"></td>
+                    <td><input name="instrutor" type="radio" value="ruim"></td>
+                </tr>                                                
+            </tbody>
+        </table>
+        <label>Observação</label>
+        <textarea name="observacao" rows="3" cols="40"></textarea>
+        <div><input type="submit"></div>
+    </form>
+    <script>
+        var data = document.getElementsByName("data")[0];
+        var d = new Date();
+        data.valueAsDate = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    </script>
+</body>
+</html>
