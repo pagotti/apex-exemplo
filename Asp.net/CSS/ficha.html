@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ficha Apex</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+    <form>
+        <div class="row">
+            <div class="col"><h3>Apex<small><sub>ensino</sub></small></h3></div>
+            <div class="col text-right"><h2>Avaliação Diária</h2></div>
+        </div>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td width="20%"><label>Nome</label></td>
+                    <td width="80%"><input class="form-control" name="nome" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>Data</label></td>
+                    <td><input class="form-control" id="data" name="data" type="date"></td>
+                </tr>
+                <tr>
+                    <td><label>Curso</label></td>
+                    <td>
+                        <select class="form-control" name="curso">
+                            <option value="logica_101" label="Lógica de Programação"></option>
+                            <option value="csharp_backend" label="C# Back-End"></option>
+                            <option value="excel" label="Excel"></option>
+                            <option value="java" label="Java Back-End"></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Instrutor</label></td>
+                    <td><input class="form-control" name="instrutor" type="text"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Seus comentários são de extrema valia para a avaliação de nossos eventos</p>
+        <table class="table table-bordered">
+            <thead>
+                <th>Tópico</th>
+                <th class="text-center">Excelente</th>
+                <th class="text-center">Muito Bom</th>
+                <th class="text-center">Bom</th>
+                <th class="text-center">Regular</th>
+                <th class="text-center">Ruim</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="20%">Sala de Aula/Equipamento</td>
+                    <td width="16%"><input class="form-control text-center" name="sala" type="radio" value="excelente"></td>
+                    <td width="16%"><input class="form-control text-center" name="sala" type="radio" value="muito_bom"></td>
+                    <td width="16%"><input class="form-control text-center" name="sala" type="radio" value="bom"></td>
+                    <td width="16%"><input class="form-control text-center" name="sala" type="radio" value="regular"></td>
+                    <td width="16%"><input class="form-control text-center" name="sala" type="radio" value="ruim"></td>
+                </tr>
+                <tr>
+                    <td>Pontualidade</td>
+                    <td><input class="form-control text-center" name="pontualidade" type="radio" value="excelente"></td>
+                    <td><input class="form-control text-center" name="pontualidade" type="radio" value="muito_bom"></td>
+                    <td><input class="form-control text-center" name="pontualidade" type="radio" value="bom"></td>
+                    <td><input class="form-control text-center" name="pontualidade" type="radio" value="regular"></td>
+                    <td><input class="form-control text-center" name="pontualidade" type="radio" value="ruim"></td>
+                </tr>
+                <tr>
+                    <td>Objetividade</td>
+                    <td><input class="form-control text-center" name="objetividade" type="radio" value="excelente"></td>
+                    <td><input class="form-control text-center" name="objetividade" type="radio" value="muito_bom"></td>
+                    <td><input class="form-control text-center" name="objetividade" type="radio" value="bom"></td>
+                    <td><input class="form-control text-center" name="objetividade" type="radio" value="regular"></td>
+                    <td><input class="form-control text-center" name="objetividade" type="radio" value="ruim"></td>
+                </tr>
+                <tr>
+                    <td>Conteudo Apresentado</td>
+                    <td><input class="form-control text-center" name="conteudo" type="radio" value="excelente"></td>
+                    <td><input class="form-control text-center" name="conteudo" type="radio" value="muito_bom"></td>
+                    <td><input class="form-control text-center" name="conteudo" type="radio" value="bom"></td>
+                    <td><input class="form-control text-center" name="conteudo" type="radio" value="regular"></td>
+                    <td><input class="form-control text-center" name="conteudo" type="radio" value="ruim"></td>
+                </tr>
+                <tr>
+                    <td>Aplicação dos Conteúdos em suas Atividades</td>
+                    <td><input class="form-control text-center" name="aplicacao" type="radio" value="excelente"></td>
+                    <td><input class="form-control text-center" name="aplicacao" type="radio" value="muito_bom"></td>
+                    <td><input class="form-control text-center" name="aplicacao" type="radio" value="bom"></td>
+                    <td><input class="form-control text-center" name="aplicacao" type="radio" value="regular"></td>
+                    <td><input class="form-control text-center" name="aplicacao" type="radio" value="ruim"></td>
+                </tr>                                                
+                <tr>
+                    <td>Instrutor</td>
+                    <td><input class="form-control text-center" name="instrutor" type="radio" value="excelente"></td>
+                    <td><input class="form-control text-center" name="instrutor" type="radio" value="muito_bom"></td>
+                    <td><input class="form-control text-center" name="instrutor" type="radio" value="bom"></td>
+                    <td><input class="form-control text-center" name="instrutor" type="radio" value="regular"></td>
+                    <td><input class="form-control text-center" name="instrutor" type="radio" value="ruim"></td>
+                </tr>        
+                <tr>
+                    <td>Tópico Mais Importante</td>
+                    <td colspan="5"><input class="form-control" name="topico_importante" type="text"></td>
+                </tr>                                        
+                <tr>
+                    <td>Dificuldade</td>
+                    <td colspan="5"><input class="form-control" name="dificuldade" type="text"></td>
+                </tr>                                        
+                <tr>
+                    <td>Sugestão/Crítica</td>
+                    <td colspan="5"><input class="form-control" name="sugestao" type="text"></td>
+                </tr>                                        
+            </tbody>
+        </table>
+        <div><input class="btn btn-primary" type="submit"></div>
+    </form>
+    </div>
+    <script>
+        var data = document.getElementsByName("data")[0];
+        var d = new Date();
+        data.valueAsDate = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    </script>
+</body>
+
+
+</html>

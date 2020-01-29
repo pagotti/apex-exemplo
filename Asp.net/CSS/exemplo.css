@@ -1,0 +1,29 @@
+/* formatando o titulo */
+* {
+    color: blue;
+    font-family: "Arial";
+}
+
+#txt {
+    color: burlywood;
+}
+
+.minhaclasse {
+    color: green;
+}
+
+h2 {
+    color: red; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: red;
+}
+
+input {
+    color: blue;
+}
+
+body {
+    background-color: blanchedalmond;
+}
