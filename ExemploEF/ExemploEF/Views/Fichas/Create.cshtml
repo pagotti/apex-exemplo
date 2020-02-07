@@ -1,0 +1,111 @@
+﻿@model ExemploEF.Models.Ficha
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<hr />
+<div class="row">
+    <div class="col"><h3>Apex<small><sub>ensino</sub></small></h3></div>
+    <div class="col text-right"><h2>Avaliação Diária</h2></div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td width="20%">
+                            <label asp-for="Nome" class="control-label"></label>
+                        </td>
+                        <td width="80%">
+                            <input asp-for="Nome" class="form-control" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="Data" class="control-label"></label></td>
+                        <td>
+                            <input asp-for="Data" class="form-control" />
+                            <span asp-validation-for="Data" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="Curso" class="control-label"></label></td>
+                        <td>
+                            <input asp-for="Curso" class="form-control" />
+                            <span asp-validation-for="Curso" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="Instrutor" class="control-label"></label></td>
+                        <td><input asp-for="Instrutor" class="form-control" /><span asp-validation-for="Instrutor" class="text-danger"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Seus comentários são de extrema valia para a avaliação de nossos eventos</p>
+            <table class="table table-bordered">
+                <thead>
+                    <th class="text-center">Tópico</th>
+                    <th class="text-center">Excelente</th>
+                    <th class="text-center">Bom</th>
+                    <th class="text-center">Ruim</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="20%"><label asp-for="SalaEquipamentoNota" class="control-label"></label></td>
+                        <td width="16%"><input class="form-control text-center" name="SalaEquipamentoNota" type="radio" value="3"></td>
+                        <td width="16%"><input class="form-control text-center" name="SalaEquipamentoNota" type="radio" value="2"></td>
+                        <td width="16%"><input class="form-control text-center" name="SalaEquipamentoNota" type="radio" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="PontualidadeNota" class="control-label"></label></td>
+                        <td><input class="form-control text-center" name="PontualidadeNota" type="radio" value="3"></td>
+                        <td><input class="form-control text-center" name="PontualidadeNota" type="radio" value="2"></td>
+                        <td><input class="form-control text-center" name="PontualidadeNota" type="radio" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="ConteudoNota" class="control-label"></label></td>
+                        <td><input class="form-control text-center" name="ConteudoNota" type="radio" value="3"></td>
+                        <td><input class="form-control text-center" name="ConteudoNota" type="radio" value="2"></td>
+                        <td><input class="form-control text-center" name="ConteudoNota" type="radio" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="InstrutorNota" class="control-label"></label></td>
+                        <td><input class="form-control text-center" name="InstrutorNota" type="radio" value="3"></td>
+                        <td><input class="form-control text-center" name="InstrutorNota" type="radio" value="2"></td>
+                        <td><input class="form-control text-center" name="InstrutorNota" type="radio" value="1"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td> <label asp-for="Dificuldade" class="control-label"></label></td>
+                        <td colspan="3">
+                            <input asp-for="Dificuldade" class="form-control" />
+                            <span asp-validation-for="Dificuldade" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="Sugestao" class="control-label"></label></td>
+                        <td colspan="3">
+                            <input asp-for="Sugestao" class="form-control" />
+                            <span asp-validation-for="Sugestao" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

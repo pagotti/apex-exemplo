@@ -10,6 +10,8 @@ namespace ExemploEF.Models
     {
         public virtual DbSet<Usuario> Usuarios { get; set; }
 
+        public virtual DbSet<Ficha> Fichas { get; set; }
+
         public UserDbContext(DbContextOptions<UserDbContext> options)
             :base(options)
         { 

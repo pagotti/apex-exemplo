@@ -5,10 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200204234107_primeiro.cs" />
-    <Compile Remove="Migrations\20200204234107_primeiro.Designer.cs" />
-    <Compile Remove="Migrations\20200205000345_primeiro.cs" />
-    <Compile Remove="Migrations\20200205000345_primeiro.Designer.cs" />
+    <Compile Remove="Migrations\20200207000621_fichas.cs" />
+    <Compile Remove="Migrations\20200207000621_fichas.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
