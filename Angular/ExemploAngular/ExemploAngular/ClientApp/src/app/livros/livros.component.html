@@ -1,0 +1,23 @@
+<h1 id="tableLabel">Livros</h1>
+
+<p *ngIf="!livros"><em>Carregando...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="livros">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Autor</th>
+      <th>Edição</th>
+      <th>Preço</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let livro of livros">
+      <td>{{ livro.titulo }}</td>
+      <td>{{ livro.autor }}</td>
+      <td>{{ livro.edicao }}</td>
+      <td>{{ livro.preco | currency:'BRL' }}</td>
+    </tr>
+  </tbody>
+</table>
+

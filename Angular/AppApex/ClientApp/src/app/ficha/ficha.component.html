@@ -1,0 +1,128 @@
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="col"><h3>Apex<small><sub>ensino</sub></small></h3></div>
+      <div class="col text-right"><h2>Avaliação Diária</h2></div>
+    </div>
+    <nav aria-label="Navegação">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" (click)="volta()">Anterior</a></li>
+        <li class="page-item"><a class="page-link" (click)="mostra(1)">1</a></li>
+        <li class="page-item"><a class="page-link" (click)="mostra(2)">2</a></li>
+        <li class="page-item"><a class="page-link" (click)="mostra(3)">3</a></li>
+        <li class="page-item"><a class="page-link" (click)="vai()">Próxima</a></li>
+      </ul>
+    </nav>
+    <div [ngSwitch]="pagina">
+      <table *ngSwitchCase="1" class="table table-bordered">
+        <tbody>
+          <tr>
+            <td width="20%"><label>Nome</label></td>
+            <td width="80%"><input class="form-control" name="nome" [(ngModel)]="nome" type="text"></td>
+          </tr>
+          <tr>
+            <td><label>Data</label></td>
+            <td><input class="form-control" id="data" name="data" [(ngModel)]="data" type="date"></td>
+          </tr>
+          <tr>
+            <td><label>Curso</label></td>
+            <td>
+              <select class="form-control" name="curso" [(ngModel)]="curso">
+                <option value="logica_101" label="Lógica de Programação"></option>
+                <option value="csharp_backend" label="C# Back-End"></option>
+                <option value="excel" label="Excel"></option>
+                <option value="java" label="Java Back-End"></option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Instrutor</label></td>
+            <td><input class="form-control" [(ngModel)]="instrutor" name="instrutor" type="text"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table *ngSwitchCase="2" class="table table-bordered">
+        <thead>
+        <th>Tópico</th>
+        <th class="text-center">Excelente</th>
+        <th class="text-center">Muito Bom</th>
+        <th class="text-center">Bom</th>
+        <th class="text-center">Regular</th>
+        <th class="text-center">Ruim</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td width="20%">Sala de Aula/Equipamento</td>
+            <td width="16%" class="text-center"><input class="form-check-input position-static" [(ngModel)]="sala" name="sala" type="radio" value="5"></td>
+            <td width="16%" class="text-center"><input class="form-check-input position-static" [(ngModel)]="sala" name="sala" type="radio" value="4"></td>
+            <td width="16%" class="text-center"><input class="form-check-input position-static" [(ngModel)]="sala" name="sala" type="radio" value="3"></td>
+            <td width="16%" class="text-center"><input class="form-check-input position-static" [(ngModel)]="sala" name="sala" type="radio" value="2"></td>
+            <td width="16%" class="text-center"><input class="form-check-input position-static" [(ngModel)]="sala" name="sala" type="radio" value="1"></td>
+          </tr>
+          <tr>
+            <td>Pontualidade</td>
+            <td><input class="form-control text-center" name="pontualidade" type="radio" [(ngModel)]="pontualidade" value="5"></td>
+            <td><input class="form-control text-center" name="pontualidade" type="radio" [(ngModel)]="pontualidade" value="4"></td>
+            <td><input class="form-control text-center" name="pontualidade" type="radio" [(ngModel)]="pontualidade" value="3"></td>
+            <td><input class="form-control text-center" name="pontualidade" type="radio" [(ngModel)]="pontualidade" value="3"></td>
+            <td><input class="form-control text-center" name="pontualidade" type="radio" [(ngModel)]="pontualidade" value="1"></td>
+          </tr>
+          <tr>
+            <td>Objetividade</td>
+            <td><input class="form-control text-center" name="objetividade" type="radio" value="excelente"></td>
+            <td><input class="form-control text-center" name="objetividade" type="radio" value="muito_bom"></td>
+            <td><input class="form-control text-center" name="objetividade" type="radio" value="bom"></td>
+            <td><input class="form-control text-center" name="objetividade" type="radio" value="regular"></td>
+            <td><input class="form-control text-center" name="objetividade" type="radio" value="ruim"></td>
+          </tr>
+          <tr>
+            <td>Conteudo Apresentado</td>
+            <td><input class="form-control text-center" name="conteudo" type="radio" [(ngModel)]="conteudo" value="5"></td>
+            <td><input class="form-control text-center" name="conteudo" type="radio" [(ngModel)]="conteudo" value="4"></td>
+            <td><input class="form-control text-center" name="conteudo" type="radio" [(ngModel)]="conteudo" value="3"></td>
+            <td><input class="form-control text-center" name="conteudo" type="radio" [(ngModel)]="conteudo" value="2"></td>
+            <td><input class="form-control text-center" name="conteudo" type="radio" [(ngModel)]="conteudo" value="1"></td>
+          </tr>
+          <tr>
+            <td>Aplicação dos Conteúdos em suas Atividades</td>
+            <td><input class="form-control text-center" name="aplicacao" type="radio" value="excelente"></td>
+            <td><input class="form-control text-center" name="aplicacao" type="radio" value="muito_bom"></td>
+            <td><input class="form-control text-center" name="aplicacao" type="radio" value="bom"></td>
+            <td><input class="form-control text-center" name="aplicacao" type="radio" value="regular"></td>
+            <td><input class="form-control text-center" name="aplicacao" type="radio" value="ruim"></td>
+          </tr>
+          <tr>
+            <td>Instrutor</td>
+            <td><input class="form-control text-center" name="instrutor" type="radio" [(ngModel)]="instrutornota" value="5"></td>
+            <td><input class="form-control text-center" name="instrutor" type="radio" [(ngModel)]="instrutornota" value="4"></td>
+            <td><input class="form-control text-center" name="instrutor" type="radio" [(ngModel)]="instrutornota" value="3"></td>
+            <td><input class="form-control text-center" name="instrutor" type="radio" [(ngModel)]="instrutornota" value="2"></td>
+            <td><input class="form-control text-center" name="instrutor" type="radio" [(ngModel)]="instrutornota" value="1"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngSwitchCase="3">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td width="20%">Tópico Mais Importante</td>
+              <td width="80%"><input class="form-control" name="topico_importante" type="text"></td>
+            </tr>
+            <tr>
+              <td>Dificuldade</td>
+              <td><input class="form-control" [(ngModel)]="dificuldade" name="dificuldade" type="text"></td>
+            </tr>
+            <tr>
+              <td>Sugestão/Crítica</td>
+              <td><input class="form-control" [(ngModel)]="sugestao" name="sugestao" type="text"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div><button class="btn btn-primary" type="button" (click)="enviar()">Enviar</button></div>
+      </div>
+    </div>
+  </form>
+
+
+
+</div>
