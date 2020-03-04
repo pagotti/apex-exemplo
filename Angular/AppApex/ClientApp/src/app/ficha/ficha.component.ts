@@ -8,18 +8,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FichaComponent implements OnInit {
 
-  nome: string;
-  curso: string;
-  data: Date;
-  instrutor: string;
-  sala: number;
-  pontualidade: number;
-  conteudo: number;
-  instrutornota: number;
-  dificuldade: string;
-  sugestao: string;
-  http: HttpClient;
+  nome:string;
+  curso:string;
+  data:Date;
+  instrutor:string;
+  sala:string;
+  pontualidade:string;
+  conteudo:string;
+  instrutornota:string;
+  dificuldade:string;
+  sugestao:string;
+  http:HttpClient;
   baseUrl: string;
+  enviou: boolean = false;
 
   constructor(http: HttpClient,
     @Inject('BASE_URL') baseUrl: string) {
@@ -31,20 +32,38 @@ export class FichaComponent implements OnInit {
   }
 
   enviar() {
-
     let ficha: Ficha = new Ficha();
     ficha.nome = this.nome;
     ficha.curso = this.curso;
     ficha.data = this.data;
     ficha.instrutor = this.instrutor;
-    ficha.salaequipamentonota = this.sala;
-    ficha.conteudonota = this.conteudo;
-    ficha.pontualidadenota = this.pontualidade;
-    ficha.instrutornota = this.instrutornota;
+    ficha.salaequipamentonota = parseInt(this.sala);
+    ficha.conteudonota = parseInt(this.conteudo);
+    ficha.pontualidadenota = parseInt(this.pontualidade);
+    ficha.instrutornota = parseInt(this.instrutornota);
     ficha.dificuldade = this.dificuldade;
     ficha.sugestao = this.sugestao;
+    this.enviou = true;
 
-    this.http.post(this.baseUrl + "api/fichas", ficha);
+    this.http.post(this.baseUrl + "api/fichas", ficha).
+      subscribe(r => {
+        console.log(r);
+        alert("Obrigado por enviar a sua avaliação");
+        this.enviou = false;
+        this.pagina = 1;
+        this.nome = "";
+        this.curso = "";
+        this.instrutor = "";
+        this.data = null;
+        this.dificuldade = "";
+        this.instrutornota = null;
+        this.pontualidade = null;
+        this.conteudo = null;
+        this.sala = null;
+        this.sugestao = "";
+
+      });
+
 
   }
 
