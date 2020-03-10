@@ -43,6 +43,11 @@ namespace BlogBack
 
             app.UseRouting();
 
+            if (env.IsDevelopment())
+            {
+                app.UseCors();
+            }
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
