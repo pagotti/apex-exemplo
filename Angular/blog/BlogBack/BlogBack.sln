@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogBack", "BlogBack\BlogBack.csproj", "{5EB9FCE0-B177-4A08-829E-A5129D51A93C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EB9FCE0-B177-4A08-829E-A5129D51A93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB9FCE0-B177-4A08-829E-A5129D51A93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB9FCE0-B177-4A08-829E-A5129D51A93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB9FCE0-B177-4A08-829E-A5129D51A93C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {800E59F3-7DF0-4062-BE82-0FFDDF148B02}
+	EndGlobalSection
+EndGlobal
