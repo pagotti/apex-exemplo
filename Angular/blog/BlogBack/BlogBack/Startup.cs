@@ -45,7 +45,9 @@ namespace BlogBack
 
             if (env.IsDevelopment())
             {
-                app.UseCors();
+                app.UseCors(builder => {
+                    builder.WithOrigins("http://localhost:4200");
+                });
             }
 
             app.UseAuthorization();

@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BlogBack.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace BlogBack.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors]
     public class AutoresController : ControllerBase
     {
         private readonly BlogDbContext _context;
