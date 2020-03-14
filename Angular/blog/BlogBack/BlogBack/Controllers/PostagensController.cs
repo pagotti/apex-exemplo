@@ -112,5 +112,69 @@ namespace BlogBack.Controllers
         {
             return _context.Postagems.Any(e => e.Id == id);
         }
+
+        [HttpPost]
+        [Route("like/{id}")]
+        public async Task<ActionResult> Like(int id)
+        {
+            var postagem = await _context.Postagems.FindAsync(id);
+            if (postagem == null)
+            {
+                return BadRequest();
+            }
+
+            postagem.Likes++;
+            _context.Entry(postagem).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!PostagemExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        [HttpPost]
+        [Route("dislike/{id}")]
+        public async Task<ActionResult> Dislike(int id)
+        {
+            var postagem = await _context.Postagems.FindAsync(id);
+            if (postagem == null)
+            {
+                return BadRequest();
+            }
+
+            postagem.Dislikes++;
+            _context.Entry(postagem).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!PostagemExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
     }
 }

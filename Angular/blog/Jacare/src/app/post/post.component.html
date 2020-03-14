@@ -1,0 +1,29 @@
+<h1>{{postagem.titulo}}</h1>
+<h4>{{postagem.autor.nome}}</h4>
+<div class="row">
+    <div class="col-10">
+        <p>{{postagem.texto}}</p>
+    </div>
+    <div class="col-2">
+        <img src="{{postagem.foto}}">
+    </div>
+</div>
+<div class="row">
+    <div class="col-10">
+        <p>#comedia #humor #terror</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        {{postagem.likes}} <a (click)="like()">Likes</a>
+        {{postagem.dislikes}} <a (click)="dislike()">Dislikes</a>
+    </div>
+    <div class="col-6 text-right">
+        {{postagem.data}}
+    </div>
+</div>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let c of postagem.comentarios">
+        <app-comentario [comentario]="c"></app-comentario>
+    </li>
+</ul>
